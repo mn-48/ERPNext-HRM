@@ -1,0 +1,208 @@
+2025-02-27 09:37:59,545 ERROR frappe Unable to load translations
+Site: erp.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 309, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1632, in setup_module_map
+    for module in get_module_list(app):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1478, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 245, in hget
+    value = generator()
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 190, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 202, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+2025-02-27 09:37:59,549 ERROR frappe Unable to load translations
+Site: erp.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 309, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1632, in setup_module_map
+    for module in get_module_list(app):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1478, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 245, in hget
+    value = generator()
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 190, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 202, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+2025-02-27 09:38:03,455 ERROR frappe Unable to load translations
+Site: erp.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 309, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1632, in setup_module_map
+    for module in get_module_list(app):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1478, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 245, in hget
+    value = generator()
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 190, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 202, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+2025-02-27 09:38:03,457 ERROR frappe Unable to load translations
+Site: erp.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 309, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1632, in setup_module_map
+    for module in get_module_list(app):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1478, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 245, in hget
+    value = generator()
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 190, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/translate.py", line 202, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1443, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1473, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+  File "/home/nazmul/frappe-bench/apps/frappe/frappe/__init__.py", line 1414, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
